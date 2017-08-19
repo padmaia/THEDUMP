@@ -1,0 +1,36 @@
+{
+  "name": "thedump",
+  "version": "0.1.0",
+  "description": "music social network",
+  "main": "src/server/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "posttest": "npm run lint",
+    "start": "nodemon --exec babel-node -- src/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.2.1",
+    "nodemon": "^1.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/padmaia/THEDUMP.git"
+  },
+  "author": "Maia Teegarden",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/padmaia/THEDUMP/issues"
+  },
+  "homepage": "https://github.com/padmaia/THEDUMP#readme"
+}
