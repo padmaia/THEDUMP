@@ -4,6 +4,7 @@
   "description": "music social network",
   "main": "src/server/index.js",
   "scripts": {
+    "build": "webpack",
     "lint": "eslint --ext js,jsx .",
     "posttest": "npm run lint",
     "start": "nodemon -e js,jsx --exec babel-node -- src/server/index",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "eslint": "^4.5.0",
@@ -23,7 +25,9 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.2.1",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "webpack": "^3.5.5",
+    "webpack-dev-middleware": "^1.12.0"
   },
   "repository": {
     "type": "git",

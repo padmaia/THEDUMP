@@ -15,8 +15,8 @@ export default function Html() {
       </head>
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
+        <script src="/static/js/thedump.js" />
       </body>
     </html>
   );
 }
-// huh
