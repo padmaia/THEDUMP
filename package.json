@@ -4,13 +4,15 @@
   "description": "music social network",
   "main": "src/server/index.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint --ext js,jsx .",
     "posttest": "npm run lint",
-    "start": "nodemon --exec babel-node -- src/server",
+    "start": "nodemon -e js,jsx --exec babel-node -- src/server/index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
