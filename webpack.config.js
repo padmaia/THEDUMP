@@ -1,7 +1,12 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/client/index.jsx',
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-hot-middleware/client',
+    path.join(__dirname, './src/client/index.jsx'),
+  ],
   output: {
     filename: 'thedump.js',
     path: path.resolve(__dirname, 'dist'),
@@ -20,4 +25,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+  ],
 };

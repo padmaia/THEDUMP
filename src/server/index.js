@@ -1,6 +1,7 @@
 import express from 'express';
 import webpack from 'webpack'; // eslint-disable-line import/no-extraneous-dependencies
 import webpackDevMiddleware from 'webpack-dev-middleware'; // eslint-disable-line import/no-extraneous-dependencies
+import webpackHotMiddleware from 'webpack-hot-middleware'; // eslint-disable-line import/no-extraneous-dependencies
 
 import config from '../../webpack.config';
 import handleSSR from './ssr/handleSSR';
@@ -11,6 +12,7 @@ const compiler = webpack(config);
 app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath,
 }));
+app.use(webpackHotMiddleware(compiler));
 
 app.get('*', handleSSR);
 

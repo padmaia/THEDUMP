@@ -7,7 +7,7 @@
     "build": "webpack",
     "lint": "eslint --ext js,jsx .",
     "posttest": "npm run lint",
-    "start": "nodemon -e js,jsx --exec babel-node -- src/server/index",
+    "start": "nodemon --watch src/servr -e js,jsx --exec babel-node -- src/server/index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -26,8 +26,10 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.2.1",
     "nodemon": "^1.11.0",
+    "react-hot-loader": "^3.0.0-beta.7",
     "webpack": "^3.5.5",
-    "webpack-dev-middleware": "^1.12.0"
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-hot-middleware": "^2.18.2"
   },
   "repository": {
     "type": "git",
