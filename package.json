@@ -4,10 +4,16 @@
   "description": "music social network",
   "main": "src/server/index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "npm run clean && npm run build:client && npm run build:server",
+    "build:client": "webpack -p --env production",
+    "build:server": "babel src --out-dir lib",
+    "clean": "npm run clean:client && npm run clean:server",
+    "clean:client": "rm -rf dist",
+    "clean:server": "rm -rf lib",
+    "dev": "NODE_ENV=development nodemon --watch src/server -e js,jsx --exec babel-node -- src/server",
     "lint": "eslint --ext js,jsx .",
     "posttest": "npm run lint",
-    "start": "nodemon --watch src/servr -e js,jsx --exec babel-node -- src/server/index",
+    "start": "NODE_ENV=production node lib/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -28,6 +34,8 @@
     "nodemon": "^1.11.0",
     "react-hot-loader": "^3.0.0-beta.7",
     "webpack": "^3.5.5",
+    "webpack-bundle-analyzer": "^2.9.0",
+    "webpack-config-utils": "^2.3.0",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.18.2"
   },
