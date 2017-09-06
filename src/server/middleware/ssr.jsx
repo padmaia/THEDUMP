@@ -4,7 +4,7 @@ import { renderToString } from 'react-dom/server';
 
 import THEDUMP from '../../universal/THEDUMP';
 
-export default function Html() {
+export function Html() {
   const html = renderToString(<THEDUMP />);
 
   return (
@@ -19,4 +19,8 @@ export default function Html() {
       </body>
     </html>
   );
+}
+
+export default function handleSSR(req, res) {
+  res.send(renderToString(<Html />));
 }

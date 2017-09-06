@@ -1,3 +1,26 @@
 {
-  "extends": "airbnb"
+  "extends": ["airbnb", "plugin:jest/recommended"],
+  "plugins": [
+    "jest"
+  ],
+  "overrides": [
+    {
+      "files": ["src/server/*"],
+      "env": {
+        "node": true
+      }
+    },
+    {
+      "files": ["src/client/*"],
+      "env": {
+        "browser": true
+      }
+    },
+    {
+      "files": ["*.spec.js", "*.spec.jsx"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }

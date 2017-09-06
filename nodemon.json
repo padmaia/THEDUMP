@@ -1,0 +1,9 @@
+{
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js jsx",
+  "watch": "src/server",
+  "ignore": "**/*.spec.*",
+  "exec": "babel-node -- src/server"
+}

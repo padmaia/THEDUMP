@@ -33,7 +33,10 @@ module.exports = (env) => {
     plugins: removeEmpty([
       ifDevelopment(new webpack.HotModuleReplacementPlugin()),
       ifDevelopment(new webpack.NoEmitOnErrorsPlugin()),
-      ifProduction(new BundleAnalyzerPlugin({ analyzerMode: 'static' })),
+      ifProduction(new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: false })),
     ]),
+    watchOptions: {
+      ignored: [/node_modules/, '**/*.spec.*'],
+    },
   };
 };
