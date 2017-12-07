@@ -5,5 +5,5 @@
   "ext": "js jsx",
   "watch": "src/server",
   "ignore": "**/*.spec.*",
-  "exec": "babel-node -- src/server"
+  "exec": "node -r dotenv/config -r babel-register src/server"
 }
