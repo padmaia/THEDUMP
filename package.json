@@ -14,7 +14,7 @@
     "lint": "eslint --ext js,jsx src",
     "posttest": "npm run lint",
     "start": "NODE_ENV=production node lib/server",
-    "test": "jest"
+    "test": "jest --no-cache"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
