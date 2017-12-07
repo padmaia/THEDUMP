@@ -4,6 +4,11 @@ import ReactDOM from 'react-dom';
 
 import THEDUMP from '../universal/THEDUMP';
 
+// Remove useless/ugly hash Facebook auth adds to url
+if (window.location.hash && window.location.hash === '#_=_') {
+  window.location.hash = '';
+}
+
 const rootEl = document.getElementById('root');
 const render = (Component) => {
   ReactDOM.render(
