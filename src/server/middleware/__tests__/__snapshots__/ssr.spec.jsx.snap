@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`SSR middleware should send app html 1`] = `"<html lang=\\"en-US\\" data-reactroot=\\"\\" data-reactid=\\"1\\" data-react-checksum=\\"-488457645\\"><head data-reactid=\\"2\\"><link rel=\\"stylesheet\\" href=\\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\\" data-reactid=\\"3\\"/><link rel=\\"stylesheet\\" href=\\"https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css\\" data-reactid=\\"4\\"/></head><body data-reactid=\\"5\\"><div id=\\"root\\" data-reactid=\\"6\\"><div data-reactroot=\\"\\" data-reactid=\\"1\\" data-react-checksum=\\"295965267\\">Root HTML</div></div><script src=\\"/static/js/thedump.js\\" data-reactid=\\"7\\"></script></body></html>"`;
